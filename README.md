@@ -1,5 +1,5 @@
 # LeetCode JavaScript
 
-> A full-featured backend for managing blogs, users, comments, notifications, and views — built with NestJS, TypeScript, Prisma, PostgreSQL, Docker, and CI/CD pipelines.
+> JavaScript-only LeetCode questions with solutions, explanations, and concept-based tagging.
 
 ---
