@@ -1,0 +1,22 @@
+{
+  "name": "leetcode-javascript",
+  "version": "0.0.1",
+  "description": "JavaScript-only LeetCode questions with solutions, explanations, and concept-based tagging.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahadathhs/leetcode-javascript.git"
+  },
+  "keywords": ["javascript", "leetcode", "algorithms", "data-structures", "interview-prep", "problem-solving"
+],
+  "author": "https://github.com/shahadathhs",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shahadathhs/leetcode-javascript/issues"
+  },
+  "homepage": "https://github.com/shahadathhs/leetcode-javascript#readme"
+}
