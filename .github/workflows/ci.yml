@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   pull_request:
+    branches:
+      - '**'
 
 jobs:
   build-and-test:
@@ -18,13 +20,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'
 
-      - name: 📦 Install pnpm
-        run: npm install -g pnpm
+      - name: ⬇️ Enable pnpm
+        run: corepack enable && corepack prepare pnpm@latest --activate
 
       - name: 📦 Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: 🔍 Run ESLint
         run: pnpm lint
