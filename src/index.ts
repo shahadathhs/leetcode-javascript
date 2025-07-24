@@ -1,1 +1,5 @@
-console.info('Hello, LeetCode JavaScript!')
+function main() {
+  console.info('This is the main function.')
+}
+
+main()
