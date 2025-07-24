@@ -1,4 +1,4 @@
-import { checkIfInstanceOf } from 'app/2618'
+import { checkIfInstanceOf } from "@/app/2618"
 
 // * Example 1
 const func1 = () => checkIfInstanceOf(new Date(), Date)

@@ -33,6 +33,7 @@
   "homepage": "https://github.com/shahadathhs/leetcode-javascript#readme",
   "devDependencies": {
     "@eslint/js": "^9.31.0",
+    "@types/node": "^24.1.0",
     "eslint": "^9.31.0",
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
