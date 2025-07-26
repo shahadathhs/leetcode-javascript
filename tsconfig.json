@@ -9,11 +9,11 @@
     "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
     }
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "jest.config.ts", "scripts/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
