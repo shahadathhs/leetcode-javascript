@@ -17,7 +17,7 @@
     "format:fix": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:problem": "ts-node scripts/test-problem.ts"
+    "test:problem": "ts-node src/scripts/test-problem.ts"
   },
   "repository": {
     "type": "git",
