@@ -17,7 +17,9 @@
     "format:fix": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:problem": "ts-node src/scripts/test-problem.ts"
+    "test:problem": "ts-node src/scripts/test-problem.ts",
+    "ci:check": "pnpm lint && pnpm format && pnpm build && pnpm test && pnpm start",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -41,7 +43,9 @@
     "@types/node": "^24.1.0",
     "eslint": "^9.31.0",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
     "jest": "^30.0.5",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
@@ -67,5 +71,14 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/src/$1"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,json}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "src/**/*.ts": [
+      "pnpm test"
+    ]
   }
 }

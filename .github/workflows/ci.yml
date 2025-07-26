@@ -38,3 +38,6 @@ jobs:
 
       - name: 🚀 Run start command
         run: pnpm start
+
+      - name: 🧪 Run tests
+        run: pnpm test
