@@ -1,4 +1,4 @@
-import { checkIfInstanceOf } from "@/app/2618"
+import { checkIfInstanceOf } from '@/app/2618-check-if-object-instance-of-class'
 
 // * Example 1
 const func1 = () => checkIfInstanceOf(new Date(), Date)
