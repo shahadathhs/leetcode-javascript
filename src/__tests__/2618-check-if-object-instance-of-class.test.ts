@@ -1,6 +1,6 @@
 import { checkIfInstanceOf } from '@/app/2618-check-if-object-instance-of-class'
 
-describe('checkIfInstanceOf', () => {
+describe('Problem 2618: Check If Instance Of Class', () => {
   test('Example 1: new Date() is an instance of Date', () => {
     expect(checkIfInstanceOf(new Date(), Date)).toBe(true)
   })
