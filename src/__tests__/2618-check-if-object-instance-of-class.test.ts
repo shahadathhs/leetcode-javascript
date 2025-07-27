@@ -95,18 +95,29 @@ describe('Problem 2618: Check If Instance Of Class', () => {
     const Dog = class extends Object {};
     const input: [any, any] = [new Dog(), Object];
 
-    const benchmark = (label: string, fn: InstanceOfFunction) => {
+    const benchmark = (label: string, fn: InstanceOfFunction): number => {
       const start = performance.now();
       for (let i = 0; i < iterations; i++) {
         fn(...input);
       }
       const end = performance.now();
-      console.log(`${label} took ${(end - start).toFixed(2)}ms for ${iterations} iterations`);
+      return end - start;
     };
 
-    test('Compare performance', () => {
-      benchmark('checkIfInstanceOf', checkIfInstanceOf);
-      benchmark('checkIfInstanceOfUsingPrototype', checkIfInstanceOfUsingPrototype);
+    // Run benchmarks first, store times
+    const timeA = benchmark('checkIfInstanceOf', checkIfInstanceOf);
+    const timeB = benchmark('checkIfInstanceOfUsingPrototype', checkIfInstanceOfUsingPrototype);
+
+    const slower = timeA > timeB ? 'checkIfInstanceOf' : 'checkIfInstanceOfUsingPrototype';
+    const factor = (Math.max(timeA, timeB) / Math.min(timeA, timeB)).toFixed(1);
+
+    // Now the test name includes the summary info
+    test(`Performance: checkIfInstanceOf took ${timeA.toFixed(2)}ms and checkIfInstanceOfUsingPrototype took ${timeB.toFixed(2)}ms`, () => {
+      expect(true).toBe(true);
+    });
+
+    test(`Comparison: ${slower} is ${factor}x slower`, () => {
+      expect(true).toBe(true);
     });
   });
 });
