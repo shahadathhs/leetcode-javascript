@@ -9,7 +9,6 @@
   "scripts": {
     "clean": "rm -rf dist node_modules pnpm-lock.yaml && pnpm install",
     "dev": "ts-node --transpile-only -r tsconfig-paths/register src/main.ts",
-    "dev:cli": "ts-node --transpile-only -r tsconfig-paths/register src/scripts/solution-cli.ts",
     "build": "rm -rf dist && tsc && tsc-alias",
     "start": "node dist/main.js",
     "lint": "eslint . --ext .ts",
@@ -21,6 +20,7 @@
     "test:problem": "ts-node src/scripts/test-problem.ts",
     "test:cli": "ts-node --transpile-only -r tsconfig-paths/register src/scripts/test-cli.ts",
     "ci:check": "pnpm lint && pnpm format && pnpm build && pnpm test && pnpm start",
+    "ci:fix": "pnpm lint:fix && pnpm format:fix && pnpm build",
     "prepare": "husky install"
   },
   "repository": {

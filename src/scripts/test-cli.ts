@@ -21,9 +21,7 @@ function getProblemChoices() {
 
 async function run() {
   console.clear();
-  console.log(
-    chalk.green.bold('\n🧠 LeetCode JavaScript Practice CLI\n')
-  );
+  console.log(chalk.green.bold('\n🧠 LeetCode JavaScript Practice CLI\n'));
 
   const { problemNumber } = await inquirer.prompt([
     {
