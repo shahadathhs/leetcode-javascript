@@ -1,5 +1,5 @@
 # LeetCode JavaScript
 
-> JavaScript-only LeetCode questions with solutions, explanations, and concept-based tagging.
+> JavaScript-only LeetCode questions with solutions, and explanations.
 
 ---
