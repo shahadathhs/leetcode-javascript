@@ -27,6 +27,7 @@
 //   https://leetcode.com/problems/array-prototype-last/description
 
 // * Solution
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface Array<T> {
   last(): T | -1;
 }
@@ -36,7 +37,7 @@ Array.prototype.last = function () {
 };
 
 // * Usage
-const arr: Array<number> = [1, 2, 3];
+// const arr: Array<number> = [1, 2, 3];
 
-console.log(arr.last()); // 3
-console.log(arr.last()); // -1
+// console.log(arr.last()); // 3
+// console.log(arr.last()); // -1
