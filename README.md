@@ -36,18 +36,6 @@ pnpm test
 pnpm test:problem 2618
 ```
 
-### 4. Development CLI
-
-```bash
-pnpm dev
-```
-
-This starts `src/main.ts`, which accepts a problem number:
-
-```bash
-pnpm dev 2618
-```
-
 ---
 
 ## 🤝 Contributing
