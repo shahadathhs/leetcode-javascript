@@ -21,7 +21,7 @@ describe('Problem 2621: Sleep', () => {
 
     // advance all but the last millisecond
     jest.advanceTimersByTime(millis - 1);
-    await Promise.resolve();      // flush microtasks
+    await Promise.resolve(); // flush microtasks
     expect(callback).not.toHaveBeenCalled();
 
     // advance the final millisecond

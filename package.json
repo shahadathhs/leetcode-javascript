@@ -20,7 +20,7 @@
     "test:problem": "ts-node src/scripts/test-problem.ts",
     "test:cli": "ts-node --transpile-only -r tsconfig-paths/register src/scripts/test-cli.ts",
     "ci:check": "pnpm lint && pnpm format && pnpm build && pnpm test && pnpm start",
-    "ci:fix": "pnpm lint:fix && pnpm format:fix && pnpm build",
+    "ci:fix": "pnpm lint:fix && pnpm format:fix",
     "prepare": "husky install"
   },
   "repository": {
